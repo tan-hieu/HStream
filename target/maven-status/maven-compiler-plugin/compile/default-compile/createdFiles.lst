@@ -1,0 +1,7 @@
+entity\User.class
+dao\UserDaoImpl.class
+entity\Share.class
+entity\Comment.class
+entity\Video.class
+controller\MainController.class
+entity\Favourite.class

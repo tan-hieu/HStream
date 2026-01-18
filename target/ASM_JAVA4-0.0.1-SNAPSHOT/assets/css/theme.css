@@ -1,0 +1,306 @@
+:root {
+  /* Nền */
+  --bg: #0f1115;
+  --bg-soft: #1e2530;
+  --bg-panel: #0d1218;
+  /* Accent chính */
+  --accent: #6366f1;
+  --accent-dark: #4f51d9;
+  --accent-light: #7a7dfb;
+  /* Gradient thương hiệu */
+  --accent-grad: linear-gradient(135deg, #6366f1, #8b5cf6 60%, #ec4899);
+  /* Phụ trợ */
+  --violet: #8b5cf6;
+  --violet-light: #a78bfa;
+  --pink: #ec4899;
+  --pink-bold: #db2777;
+  /* Xám văn bản */
+  --gray-muted: #6b7280;
+  --gray-icon: #94a3b8;
+  --gray-subtle: #cbd5e1;
+  --gray-light: #e2e8f0;
+  /* Viền / overlay */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-soft: rgba(255, 255, 255, 0.18);
+  --layer-soft: rgba(255, 255, 255, 0.06);
+  /* Shadow */
+  --shadow-accent: 0 6px 18px -4px rgba(99, 102, 241, 0.6);
+  --shadow-soft: 0 4px 14px -4px rgba(0, 0, 0, 0.45);
+}
+
+/* Cơ bản */
+html,
+body {
+  background: var(--bg);
+  color: var(--gray-light);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-light);
+}
+a.login-btn:hover,
+.login-btn:hover i {
+  color: #fff !important;
+}
+
+hr {
+  border-color: var(--border-subtle);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Scrollbar tối */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--layer-soft);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+/* Card / panel */
+.card,
+.main-card,
+.profile-container,
+.table-wrapper,
+.search-panel,
+.result-card {
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border-subtle);
+  color: var(--gray-light);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Sidebar + header nền */
+.sidebar {
+  background: var(--bg-panel) !important;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.header {
+  background: var(--bg-panel) !important;
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Link trong sidebar */
+.sidebar a {
+  color: var(--gray-subtle);
+}
+
+.sidebar a:hover {
+  background: var(--layer-soft);
+  color: var(--accent);
+}
+
+.sidebar a.active {
+  background: var(--accent-grad);
+  color: #fff;
+  box-shadow: var(--shadow-accent);
+}
+
+/* Nút chính */
+.btn-primary,
+.btn-outline-primary:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark) !important;
+}
+
+/* Nút viền tối */
+.btn-outline-secondary {
+  border-color: var(--border-soft) !important;
+  color: var(--gray-subtle) !important;
+  background: var(--layer-soft) !important;
+}
+
+.btn-outline-secondary:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent-light) !important;
+}
+
+/* Input / select */
+.form-control,
+.form-select,
+.search-input,
+.post-search-input {
+  background: var(--bg-soft) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--gray-light) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.35) !important;
+}
+
+/* Placeholder */
+::placeholder {
+  color: var(--gray-muted) !important;
+}
+
+/* Badge trạng thái */
+.badge-publish {
+  background: var(--accent-grad);
+  color: #fff;
+}
+
+.badge-draft {
+  background: var(--layer-soft);
+  color: var(--gray-subtle);
+}
+
+/* Table header */
+table thead tr,
+.list-header {
+  background: var(--bg-soft) !important;
+  color: var(--gray-subtle) !important;
+}
+
+/* Pagination */
+.pagination-page,
+.pagination-btn,
+.page-link {
+  background: var(--bg-soft) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--gray-subtle) !important;
+}
+
+.pagination-page.active,
+.page-item.active .page-link {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: var(--shadow-accent);
+}
+
+.pagination-page:hover:not(.active),
+.page-link:hover:not(.active) {
+  background: var(--layer-soft) !important;
+  color: var(--accent-light) !important;
+}
+
+/* Thẻ video / card tùy chỉnh */
+.video-card,
+.related-video,
+.recipient,
+.user-row {
+  background: var(--bg-soft) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--gray-light);
+}
+
+.video-card:hover,
+.related-video:hover,
+.recipient:hover,
+.user-row:hover {
+  background: var(--bg-panel) !important;
+  border-color: var(--accent) !important;
+  box-shadow: var(--shadow-accent);
+}
+
+/* Avatar border cải tiến */
+.profile-avatar,
+.avatar,
+.avatar-sm {
+  border: 1px solid var(--border-soft) !important;
+  background: var(--layer-soft);
+  color: var(--gray-light);
+}
+
+.avatar-sm:hover {
+  background: var(--accent-grad);
+  color: #fff;
+}
+
+/* Dropdown profile */
+.profile-menu {
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border-soft) !important;
+}
+
+.profile-menu a {
+  color: var(--gray-subtle);
+}
+
+.profile-menu a:hover {
+  background: var(--layer-soft);
+  color: var(--accent-light);
+}
+
+/* Editor textarea */
+.editor {
+  background: var(--bg-soft) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--gray-light) !important;
+}
+
+.editor:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.35) !important;
+}
+
+/* Dropzone */
+.dashed-dropzone {
+  background: var(--bg-soft) !important;
+  border: 2px dashed var(--border-subtle) !important;
+  color: var(--gray-subtle);
+}
+
+.dashed-dropzone.dragover {
+  border-color: var(--accent) !important;
+  background: var(--layer-soft) !important;
+}
+
+/* Text muted -> dùng biến xám */
+.text-muted {
+  color: var(--gray-muted) !important;
+}
+
+/* Hover hiệu ứng chung */
+.hover-accent:hover {
+  color: var(--accent-light) !important;
+}
+
+/* Shadow helper */
+.shadow-accent {
+  box-shadow: var(--shadow-accent) !important;
+}
+
+body.app-radial {
+  background: radial-gradient(
+      900px circle at 50% 0%,
+      rgba(99, 102, 241, 0.16),
+      transparent 42%
+    ),
+    radial-gradient(
+      700px circle at 12% 82%,
+      rgba(139, 92, 246, 0.12),
+      transparent 48%
+    ),
+    linear-gradient(0deg, var(--layer-soft), var(--layer-soft)), var(--bg);
+}
